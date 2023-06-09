@@ -1,0 +1,18 @@
+@import @css/variables
+
+.logo
+  display: flex
+  align-items: center
+  gap: 1rem
+  position: relative
+  color: var(--primary)
+
+  +not-mobile
+    &::before, &::after
+      content: ''
+      position: absolute
+      bottom: 0
+
+.logoText
+  +mobile
+    display: none

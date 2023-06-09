@@ -1,22 +1,20 @@
 <script lang="ts">
-	import { SITE_TITLE } from '../../config';
+	import { SITE_TITLE } from "../../config";
+	import Logo from "../Logo/Logo.svelte";
+	import "@css/globals.scss";
 
 	export let title: string | undefined = undefined;
 
-	const pageTitle = [title, SITE_TITLE].filter(Boolean).join(' | ');
+	const pageTitle = [title, SITE_TITLE].filter(Boolean).join(" | ");
 </script>
 
 <svelte:head><title>{pageTitle}</title></svelte:head>
 <div class="layout">
+	<Logo />
 	<slot />
 </div>
 
 <style lang="scss">
-	:global(body) {
-		padding: 0;
-		margin: 0;
-	}
-
 	.layout {
 		background: salmon;
 	}
