@@ -16,6 +16,5 @@
 
 <style lang="scss">
 	.layout {
-		background: salmon;
 	}
 </style>
